@@ -12,9 +12,9 @@ export class RentalList extends Component {
 
 //rendering the Rental Cards dynamically
     renderRentals(){
-        return this.state.rentals.map((rental)=>{
+        return this.state.rentals.map((rental,index)=>{
             return(
-                <RentalCard/>
+                <RentalCard key={index} colNum='col-md-3 col-xs-6' />
             )
         })
     }
