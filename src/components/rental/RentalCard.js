@@ -1,9 +1,10 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 export function RentalCard(props){
     const rental = props.rental;
     return(
             <div className={props.colNum}>
+            <Link to= {`/rentals/${rental.id}`}>
                 <div className='card bwm-card'>
                     <img className='card-img-top' src={rental.image} alt=''></img>
                     <div className='card-block'>
@@ -13,6 +14,7 @@ export function RentalCard(props){
                         <a href='' className='card-link'>More Info</a>
                     </div>
                 </div>
+                </Link>
             </div>
            
     )
